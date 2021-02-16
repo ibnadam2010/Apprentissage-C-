@@ -82,11 +82,21 @@ namespace ConsoleApplication
             StringBuilder sb = new StringBuilder();
             sb.Append("Bienvenu");
             sb.Append("au cours de programation");
+           
+            Console.WriteLine(sb);
+            sb.Insert(17, " Chapitre 20 ");
             Console.WriteLine(sb);
 
+            
             string strb = "partie 1";
             strb += " partie 2";
-            Console.WriteLine(strb);
+
+            Console.WriteLine("La longueur de partie1 partie2 est "+ strb.Length);
+            Console.WriteLine(strb.Insert(17, " partie 3"));
+            Console.WriteLine(strb.Substring(0,8));
+            
+
+            
 
 
             //formatage de date
@@ -96,6 +106,19 @@ namespace ConsoleApplication
             Console.WriteLine("Date du jour annee seule " + dt.ToString("yyyy"));
             Console.WriteLine("Nous somme le : {0:D}" ,dt);
             Console.WriteLine("Nous somme le : {0:d}", dt);
+
+            Console.WriteLine("Saisissez votre age ");
+
+            int age = int.Parse(Console.ReadLine());
+
+            if(age < 18)
+            {
+                Console.WriteLine("vous etes un mineur");
+            }
+            else
+            {
+                Console.WriteLine("Bravo! vous etes majeur");
+            }
 
         }
     }
