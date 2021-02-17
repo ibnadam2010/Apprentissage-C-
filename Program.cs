@@ -120,6 +120,33 @@ namespace ConsoleApplication
                 Console.WriteLine("Bravo! vous etes majeur");
             }
 
+            Console.WriteLine("entrez un lettre..");
+            char alpha = char.Parse(Console.ReadLine());
+
+            if (char.IsNumber(alpha)) 
+            {
+                Console.WriteLine("La valeur saisie doit etre une lettre");
+            }
+            else 
+            {
+            switch (alpha)
+                {
+                    case 'a':
+                        Console.WriteLine("adam");
+                        break;
+                    case 'b':
+                        Console.WriteLine("boris");
+                        break;
+                    case 'c':
+                        Console.WriteLine("charles");
+                        break;
+                    default:
+                        Console.WriteLine("Aucune correspondance détectée");
+                        break;
+                }
+                    
+            }
+
         }
     }
 }
